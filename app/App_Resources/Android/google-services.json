@@ -1,0 +1,36 @@
+{
+    "project_info": {
+        "project_number": "458078300116",
+        "firebase_url": "https://nativescript-ngx-demo.firebaseio.com",
+        "project_id": "nativescript-ngx-demo",
+        "storage_bucket": "nativescript-ngx-demo.appspot.com"
+    },
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:458078300116:android:73dea704094d4891",
+            "android_client_info": {
+                "package_name": "de.holisticon.nativescript.ngdemo"
+            }
+        },
+        "oauth_client": [{
+            "client_id": "458078300116-k5o94f4i7bec4vj2gcv4cq8h0fjq00cb.apps.googleusercontent.com",
+            "client_type": 3
+        }],
+        "api_key": [{
+            "current_key": "AIzaSyC3u_LOEZzIJ-qKJABcXoS6a9nS7eb2xws"
+        }],
+        "services": {
+            "analytics_service": {
+                "status": 1
+            },
+            "appinvite_service": {
+                "status": 1,
+                "other_platform_oauth_client": []
+            },
+            "ads_service": {
+                "status": 2
+            }
+        }
+    }],
+    "configuration_version": "1"
+}

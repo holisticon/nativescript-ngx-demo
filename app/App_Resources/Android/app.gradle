@@ -1,0 +1,39 @@
+// Add your native dependencies here:
+
+dependencies {
+  compile "com.android.support:support-v4:25.3.0"
+  compile "com.android.support:appcompat-v7:21.0.0"
+  compile "com.android.support:recyclerview-v7:25.3.0"
+  compile 'com.android.support:multidex:1.0.0'
+}
+
+android {
+
+  defaultConfig {
+    applicationId = "de.holisticon.nativescript.ngdemo"
+    generatedDensities = []
+    multiDexEnabled true
+  }
+
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+
+  splits {
+    abi {
+      enable true //enables the ABIs split mechanism
+      reset() //reset the list of ABIs to be included to an empty string
+      include 'arm64-v8a', 'armeabi-v7a'
+      universalApk true
+    }
+  }
+
+  dexOptions {
+    javaMaxHeapSize '4g'
+  }
+
+}
+
+project.ext {
+  googlePlayServicesVersion = "10.2.+"
+}
