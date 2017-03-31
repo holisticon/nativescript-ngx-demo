@@ -1,12 +1,21 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
         "target": "es5",
+        "module": "commonjs",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "noEmitHelpers": true,
-        "noEmitOnError": true
+        "noEmitOnError": true,
+        "types": [
+            "jasmine"
+        ],
+        "lib": [
+            "es2015"
+        ]
     },
+    "files": [
+        "references.d.ts"
+    ],
     "exclude": [
         "node_modules",
         "platforms",
