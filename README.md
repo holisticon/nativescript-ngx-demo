@@ -1,5 +1,6 @@
 # Simple NativeScript Angular Demo App
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/holisticon/nativescript-ngx-demo.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/holisticon/nativescript-ngx-demo.svg?branch=master)](https://travis-ci.org/holisticon/nativescript-ngx-demo)
 [![Build Status](https://dev.holisticon.de/jenkins/blue/organizations/jenkins/Public%2Fnativescript-ngx-demo/activity)](https://dev.holisticon.de/jenkins/job/Public/job/nativescript-ngx-demo/job/master/1/)
 
