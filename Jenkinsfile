@@ -21,7 +21,7 @@ node('mac') {
     }
 
     stage('Build') {
-        sh "BUILD_NUMBER='${buildNumber}' npm run buildnumbering && npm run build"
+        sh "BUILD_NUMBER='${buildNumber}' npm run buildnumbering && npm run clean && npm run build"
     }
 
     timeout(10) {
