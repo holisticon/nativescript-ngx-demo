@@ -1,5 +1,7 @@
 # Simple NativeScript Angular Demo App
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/holisticon/nativescript-ngx-demo.svg)](https://greenkeeper.io/)
+
 ## development environment (mac-only!)
 
 ### setup
