@@ -1,5 +1,8 @@
 # Simple NativeScript Angular Demo App
 
+[![Build Status](https://travis-ci.org/holisticon/nativescript-ngx-demo.svg?branch=master)](https://travis-ci.org/holisticon/nativescript-ngx-demo)
+[![Build Status](https://dev.holisticon.de/jenkins/blue/organizations/jenkins/Public%2Fnativescript-ngx-demo/activity)](https://dev.holisticon.de/jenkins/job/Public/job/nativescript-ngx-demo/job/master/1/)
+
 ## development environment (mac-only!)
 
 ### setup
