@@ -10,7 +10,7 @@
   "scripts": {
     "preclean": "npm i rimraf",
     "clean": "rimraf node_modules lib hooks platforms target 'app/*.css' 'app/**/*.js' 'app/**/*.js.map'",
-    "postclean": "npm install && tns prepare android && tns prepare ios",
+    "postclean": "npm install",
     "check": "npm run tsc && npm run tslint",
     "jsonlint": "jsonlint ./app/assets/i18n/de.json -c -q -p && jsonlint ./app/assets/i18n/en.json -c -q -p",
     "buildnumbering": "node etc/buildnumbering.js",
@@ -124,7 +124,7 @@
     "lazy": "1.0.11",
     "nativescript-css-loader": "0.26.1",
     "nativescript-dev-android-snapshot": "0.0.8",
-    "nativescript-dev-sass": "0.4.2",
+    "nativescript-dev-sass": "1.0.0-rc.1",
     "nativescript-dev-typescript": "0.4.2",
     "nativescript-dev-webpack": "0.3.7",
     "nativescript-media-generator": "0.2.4",
