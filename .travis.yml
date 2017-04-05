@@ -4,8 +4,6 @@ sudo: false
 language: objective-c
 
 env:
-  - NODE_VERSION="4"
-  - NODE_VERSION="5"
   - NODE_VERSION="6"
 
 licenses:
@@ -15,7 +13,7 @@ licenses:
 script:
   - export ANDROID_HOME=/usr/local/opt/android-sdk
   - export PATH=$PATH:/usr/local/opt/android-sdk/tools:/usr/local/opt/android-sdk/platform-tools
-  - npm run build
+  #- npm run build
   #- npm run test
   #- npm run e2e
 before_install:
@@ -28,7 +26,7 @@ before_install:
   #- brew install android-sdk dash gnu-sed jpeg python3;
   #- echo y | android update sdk --filter tools,platform-tools,android-25,build-tools-25.0.2,extra-android-m2repository,extra-google-m2repository,extra-android-support --all --no-ui;
   - npm install -g npm
-  - npm install -g nativescript
+  - npm install -g nativescript@rc
   - npm install
   # CocoaPods
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet

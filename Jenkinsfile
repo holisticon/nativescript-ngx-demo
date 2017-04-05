@@ -1,6 +1,5 @@
 properties properties: [
-  [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '10']],
-  [$class: 'GitLabConnectionProperty', gitLabConnection: 'Holi Gitlab']
+  [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '30', numToKeepStr: '20']]
 ]
 
 node('mac') {
@@ -57,7 +56,7 @@ node('mac') {
    )
 
   } catch (e) {
-    //rocketSend emoji: ':sob:', message: 'Fehler'
+    rocketSend emoji: ':sob:', message: 'Fehler'
     throw e
   }
 }
