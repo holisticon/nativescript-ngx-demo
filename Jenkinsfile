@@ -6,6 +6,7 @@ node('mac') {
   try {
     // Jenkins makes these variables available for each job it runs
     def buildNumber = env.BUILD_NUMBER
+    def branchName = env.BRANCH_NAME
     def workspace = env.WORKSPACE
     def buildUrl = env.BUILD_URL
 
@@ -13,6 +14,7 @@ node('mac') {
     echo "workspace directory is $workspace"
     echo "build URL is $buildUrl"
     echo "build Number is $buildNumber"
+    echo "branch name is $branchName"
 
     stage('Checkout') {
       checkout scm
@@ -45,16 +47,19 @@ node('mac') {
       //sh "cd target && for file in *.ipa; do mv \$file \$(basename \$file .ipa)_build${buildNumber}.ipa; done && for file in *.apk; do mv \$file \$(basename \$file .apk)_build${buildNumber}.apk; done"
     }
 
-    parallel(
-      'upload APK': {
-        // TODO
-      },
-      'upload IPA': {
-       // TODO
-     },
-     failFast: false
-   )
-
+    if (branchName.equalsIgnoreCase('master')) {
+      stage('Store Upload') {
+        parallel(
+          'PlayStore': {
+            // TODO
+          },
+          'iTunes Connect': {
+            // TODO
+          },
+          failFast: false
+        )
+      }
+    }
   } catch (e) {
     rocketSend emoji: ':sob:', message: 'Fehler'
     throw e
