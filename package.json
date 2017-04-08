@@ -98,7 +98,7 @@
     "@types/jasmine": "2.2.29",
     "@types/source-map": "0.1.26",
     "@types/uglify-js": "2.0.27",
-    "babel-traverse": "6.23.1",
+    "babel-traverse": "6.24.1",
     "babel-types": "6.23.0",
     "babylon": "6.16.1",
     "chai": "3.5.0",
