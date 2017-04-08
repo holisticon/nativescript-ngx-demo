@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+import { TNSFontIconModule, TNSFontIconService } from 'nativescript-ngx-fonticon';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
@@ -15,7 +16,11 @@ import { CreateComponent } from './components/create/create.component';
     imports: [
         NativeScriptModule,
         NativeScriptFormsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        TNSFontIconModule.forRoot({
+            'fa': './fonts/font-awesome.css',
+            'ion': './fonts/ionicons.css'
+        })
     ],
     declarations: [
         AppComponent,
