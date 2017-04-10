@@ -1,0 +1,37 @@
+
+$holi-text-regular-small: 13;
+$holi-text-regular-normal: 16;
+$holi-text-regular-big: 18;
+
+/* Colors */
+$holi-black: #00080F;
+$holi-white: #FFFFFF;
+$holi-grey-light: #F8F9F9;
+$holi-grey: #E5E6E7;
+$holi-grey-medium: #CBCDCF;
+$holi-grey-medium-dark: #8A8F92;
+$holi-grey-medium-dark-transparent: rgba($holi-black, 0.45);
+$holi-grey-dark: #535659;
+$holi-green-light: #DDEEA7;
+$holi-green: #BCCF00;
+$holi-green-accent: #ADBF00;
+$holi-green-medium: #9CAC00;
+$holi-green-dark: #4D6D00;
+$holi-red: #E8394F;
+$holi-red-light: #F4A7B1;
+$holi-yellow: #F5A623;
+$holi-aqua: #49A4C3;
+
+$holi-color-primary: $holi-green;
+$holi-color-primary-dark: $holi-green-dark;
+$holi-color-primary-light: $holi-green-light;
+$holi-color-accent: $holi-green-accent;
+$holi-color-warn: $holi-red;
+$holi-color-warn-light: $holi-red-light;
+
+$holi-background-page: $holi-grey-light;
+
+// Text colors
+$holi-text-color: $holi-black;
+$holi-text-color-light: $holi-grey-medium-dark-transparent;
+$holi-text-color-negative: $holi-white;
