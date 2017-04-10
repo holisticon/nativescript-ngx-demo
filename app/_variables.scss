@@ -1,0 +1,37 @@
+
+$nt-text-regular-small: 13;
+$nt-text-regular-normal: 16;
+$nt-text-regular-big: 18;
+
+/* ANGEL */
+$nt-black: #00080F;
+$nt-white: #FFFFFF;
+$nt-grey-light: #F8F9F9;
+$nt-grey: #E5E6E7;
+$nt-grey-medium: #CBCDCF;
+$nt-grey-medium-dark: #8A8F92;
+$nt-grey-medium-dark-transparent: rgba($nt-black, 0.45);
+$nt-grey-dark: #535659;
+$nt-angel-green-light: #DDEEA7;
+$nt-angel-green: #BCCF00;
+$nt-angel-green-accent: #ADBF00;
+$nt-angel-green-medium: #9CAC00;
+$nt-angel-green-dark: #4D6D00;
+$nt-red: #E8394F;
+$nt-red-light: #F4A7B1;
+$nt-yellow: #F5A623;
+$nt-aqua: #49A4C3;
+
+$nt-color-primary: $nt-angel-green;
+$nt-color-primary-dark: $nt-angel-green-dark;
+$nt-color-primary-light: $nt-angel-green-light;
+$nt-color-accent: $nt-angel-green-accent;
+$nt-color-warn: $nt-red;
+$nt-color-warn-light: $nt-red-light;
+
+$nt-background-page: $nt-grey-light;
+
+// Text colors
+$nt-text-color: $nt-black;
+$nt-text-color-light: $nt-grey-medium-dark-transparent;
+$nt-text-color-negative: $nt-white;

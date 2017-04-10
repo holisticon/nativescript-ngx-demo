@@ -1,0 +1,599 @@
+@import 'variables';
+
+/*
+ * Global styles for whole application
+ */
+
+@import url("~/platform.css");
+@import url("fonts/font-awesome.css");
+@import url("fonts/ionicons.css");
+
+/*
+ * Page layout
+ */
+
+Page {
+    font-size: 15;
+}
+
+.nt-overview {
+    width: 100%;
+    height: 100%;
+    background-color: $nt-background-page;
+}
+
+
+/*
+ * Container
+ */
+
+.nt-content-container {
+    margin: 0;
+    padding: 10;
+}
+
+.panel {
+    padding: 10;
+}
+
+.nt-parcel-entries {
+    margin: 5 0 -5 0;
+}
+
+.nt-parcel {
+    padding: 8 0;
+}
+
+.nt-parcel-underline {
+    border-color: $nt-text-color-light;
+    border-width: 0 0 1 0;
+}
+
+.nt-parcel-overlay {
+    height: 20;
+    background-color: $nt-background-page;
+    vertical-align: bottom;
+}
+
+.nt-card {
+    margin: 0 10 5 10;
+    background-color: $nt-white;
+}
+
+.nt-page-container {
+    margin-top: 0;
+}
+
+.nt-footer-container {
+    background-color: $nt-grey;
+}
+
+.nt-delemiter {
+    height: 2;
+    width: 100%;
+    background-color: $nt-text-color-light;
+}
+
+
+/*
+ * Font Awesome Icon fonts
+ */
+
+.fa {
+    color: $nt-text-color;
+    font-family: FontAwesome, fontawesome-webfont;
+    font-size: 26;
+}
+
+.fa.check,
+.fa.reject,
+.fa.rejected {
+    margin: 0 8px;
+}
+
+.fa.reject,
+.fa.check,
+.fa.star-empty {
+    color: $nt-text-color-light;
+}
+
+.fa.checked {
+    color: $nt-angel-green-accent;
+}
+
+.fa.rejected {
+    color: $nt-color-warn;
+}
+
+.fa.star-filled {
+    color: $nt-yellow;
+}
+
+
+/*
+ * Typography
+ */
+
+Label {
+    color: $nt-text-color-light;
+    font-size: $nt-text-regular-small;
+}
+
+TextField {
+    font-size: $nt-text-regular-small;
+}
+
+.nt-primary-text {
+    color: $nt-text-color;
+    font-size: $nt-text-regular-normal;
+}
+
+.nt-secondary-text {
+    color: $nt-text-color-light;
+    font-size: $nt-text-regular-small;
+}
+
+.nt-title-bar {
+    background-color: $nt-grey;
+    color: $nt-text-color;
+    font-size: $nt-text-regular-big;
+    text-align: center;
+    width: 100%;
+}
+
+.nt-label {
+    font-size: $nt-text-regular-small;
+    color: $nt-text-color;
+    text-align: left;
+}
+
+.nt-value {
+    color: $nt-text-color;
+    font-size: $nt-text-regular-small;
+    text-align: left;
+}
+
+.nt-error-input {
+    border-width: 0 0 1 0;
+    border-color: $nt-color-warn;
+    color: $nt-color-warn;
+}
+
+.nt-error-msg {
+    color: $nt-color-warn;
+}
+
+.nt-line-through {
+    text-decoration: line-through;
+}
+
+.nt-paragraph {
+    margin-top: 15;
+}
+
+
+/*
+ * Direction
+ */
+
+.nt-text-center {
+    text-align: center;
+}
+
+.nt-text-right {
+    text-align: right;
+}
+
+
+/*
+ * Navigation
+ */
+
+.nt-navigation {
+    background: $nt-grey;
+    color: $nt-text-color-light;
+    text-transform: uppercase;
+}
+
+.nt-navigation-current {
+    color: $nt-text-color;
+}
+
+.nt-tabs {
+    background-color: $nt-grey;
+    color: $nt-text-color;
+    width: 100%;
+}
+
+.nt-button {
+    font-weight: bold;
+    background-color: $nt-grey;
+    color: $nt-text-color;
+    text-transform: uppercase;
+}
+
+.nt-button-confirm {
+    font-weight: bold;
+    background-color: $nt-color-primary;
+    color: $nt-text-color-negative;
+    text-transform: uppercase;
+}
+
+.nt-button-abort {
+    font-weight: bold;
+    background-color: $nt-color-warn;
+    color: $nt-text-color-negative;
+    text-transform: uppercase;
+}
+
+
+/*
+ * Drawing Pad
+ */
+
+.nt-drawing-pad {
+    margin-top: 10;
+    background-color: $nt-grey;
+}
+
+.nt-hidden {
+    visibility: collapse;
+}
+
+
+/*
+ * Checkbox
+ */
+
+.nt-check-box {
+    height: 20;
+    width: 20;
+    margin-right: 3;
+}
+
+
+/*
+ * Radiobutton
+ */
+
+.nt-radio-button {
+    margin: 0 0 5 0;
+}
+
+.nt-radio-button-icon {
+    width: $nt-text-regular-normal * 1.5;
+    height: $nt-text-regular-normal * 1.5;
+    border-width: 3;
+    border-color: $nt-text-color-light;
+    border-radius: $nt-text-regular-normal;
+    padding: 3;
+    margin: 0 10 0 0;
+}
+
+.nt-radio-button-icon-inner {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 20;
+}
+
+.nt-radio-button-icon.active {
+    border-color: $nt-color-accent;
+}
+
+.nt-radio-button-icon.active .nt-radio-button-icon-inner {
+    background-color: $nt-color-accent;
+}
+
+.nt-radio-button-text {
+    @extend .nt-primary-text;
+    vertical-align: center;
+}
+
+
+/*
+ * Modal Dialogs
+ */
+
+.nt-dialog {
+    background-color: $nt-background-page;
+    padding: 10;
+    width: 80%;
+    .nt-dialog-headline {
+        font-size: $nt-text-regular-big;
+        color: $nt-text-color;
+        font-weight: bold;
+    }
+}
+
+
+/*
+ * Activity Indicator
+ */
+
+ActivityIndicator {
+    background-color: $nt-background-page;
+    padding: 0 100;
+    opacity: 0.7;
+}
+
+
+/*
+ * Login Component
+ */
+
+.nt-login-container {
+    padding: 0 50 0 50;
+    .nt-logo-container {
+        margin-top: 0;
+        horizontal-align: center;
+        text-align: center;
+        .nt-logo,
+        .nt-secondary-text {
+            height: 100%;
+            width: 100%;
+            margin-bottom: 5;
+        }
+    }
+    .nt-main-container {
+        margin-top: 50;
+        TextField {
+            margin-bottom: 10;
+        }
+    }
+    .nt-login-button-container {
+        margin-top: 40;
+    }
+}
+
+
+/*
+ * Map Component
+ */
+
+.nt-map {
+    background-color: transparent;
+}
+
+.nt-retry-status {
+    horizontal-align: center;
+    text-align: center;
+}
+
+
+/*
+ * Navigation Component
+ */
+
+.tab-menu-item-container {
+    background-color: $nt-grey;
+    vertical-align: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-menu-item-container.active .tab-menu-item-text,
+.tab-menu-item-container.active .fa {
+    color: $nt-color-accent;
+}
+
+.tab-menu-item-text {
+    color: $nt-text-color;
+    vertical-align: center;
+    text-align: center;
+}
+
+
+/*
+ * Tour Component
+ */
+
+.nt-tour-number {
+    text-align: left;
+    font-size: $nt-text-regular-big;
+    margin: 0 0 2 0;
+    color: $nt-text-color;
+}
+
+.nt-tour-date,
+.nt-tour-status,
+.nt-tour-operationtime {
+    text-align: right;
+}
+
+.nt-tour-status {
+    text-align: left;
+}
+
+
+/*
+ * Tours Component
+ */
+
+.nt-tour-list {
+    padding: 0
+}
+
+.nt-tours-container,
+.nt-profile-container,
+.nt-settings-container {
+    padding: 8 0 0 0;
+}
+
+
+/*
+ * Vehicle Component
+ */
+
+.nt-vehicle {
+    background-color: transparent;
+}
+
+
+/*
+ * Task Component
+ */
+
+.nt-tasks-group-headline {
+    @extend .nt-secondary-text;
+    margin: 10 10 5 10;
+}
+
+.nt-first-task .nt-card {
+    &.nt-retry-task .nt-content-container {
+        background-color: rgba($nt-color-warn-light, 0.9);
+    }
+    .nt-content-container {
+        background-color: rgba($nt-color-primary-light, 0.9);
+    }
+}
+
+.nt-retry-task .nt-content-container {
+    background-color: rgba($nt-color-warn-light, 0.9);
+}
+
+.nt-task-disabled .nt-primary-text {
+    color: $nt-text-color-light;
+}
+
+.nt-completed-tasks .nt-card .nt-content-container {
+    background-color: rgba($nt-grey, 0.9);
+    color: $nt-text-color-light;
+}
+
+
+/*
+ * Vehicle Task Components
+ */
+
+.nt-fuel-level-input {
+    @extend .nt-primary-text;
+    width: 100%;
+}
+
+
+/*
+ * Stars
+ */
+
+.nt-stars-grey .nt-star {
+    color: $nt-text-color-light;
+}
+
+
+/*
+ * Ratings
+ */
+
+.nt-rating-card-label {
+    @extend .nt-secondary-text;
+    margin: 10 10 5 18;
+}
+
+.nt-rating-container {
+    @extend .nt-content-container;
+    padding-top: 5;
+}
+
+.nt-rating-average {
+    margin-bottom: 10;
+    .nt-star {
+        font-size: 35;
+        margin: 11 10 0 0;
+    }
+    Label {
+        font-size: 40;
+        color: $nt-text-color;
+    }
+}
+
+.nt-rating-overview {
+    .nt-star {
+        font-size: $nt-text-regular-small;
+        margin: 3 5 0 0;
+    }
+    Label {
+        margin-left: 5;
+    }
+}
+
+.nt-rating {
+    .nt-rating-value {
+        margin: 5 0 10 0;
+        .nt-star {
+            font-size: $nt-text-regular-normal;
+            margin: 4 0 0 8;
+        }
+    }
+    .nt-delemiter {
+        margin: 15 0 10 0;
+    }
+}
+
+
+/*
+ * Profile
+ */
+
+.nt-profile-container .nt-select-language .fa {
+    padding: 0 0 0 5;
+}
+
+
+/*
+ * Info
+ */
+
+.nt-info-container,
+.nt-about-container {
+    padding: 8 10 5 10;
+    Label {
+        font-size: $nt-text-regular-normal;
+        color: $nt-text-color;
+    }
+    .nt-info-headline {
+        font-size: $nt-text-regular-big;
+        font-weight: bold;
+    }
+    .nt-info-text {
+        @extend .nt-secondary-text;
+        margin-top: 5;
+    }
+}
+
+.nt-retry-status {
+    vertical-align: center;
+    text-align: center;
+}
+
+// animations
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(2, 2);
+    }
+}
+
+.nt-animate-scale {
+    animation-name: scale;
+    animation-duration: 3;
+}
+
+.nt-animate-rotate {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}

@@ -9,6 +9,9 @@ import { CouchbaseInstance } from './couchbaseinstance';
 import { ListComponent } from './components/list/list.component';
 import { CreateComponent } from './components/create/create.component';
 
+// styling
+import './app.scss';
+
 @NgModule({
     bootstrap: [
         AppComponent
