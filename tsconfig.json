@@ -10,7 +10,8 @@
             "jasmine"
         ],
         "lib": [
-            "es2015"
+            "es2015",
+            "es2015.iterable"
         ]
     },
     "files": [

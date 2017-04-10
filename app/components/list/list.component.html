@@ -1,12 +1,12 @@
-<ActionBar title="{N} Angular">
+<ActionBar title="{N} Holistic Angular">
     <ActionItem text="Create" (tap)="create()" ios.position="right"></ActionItem>
 </ActionBar>
 <GridLayout>
     <ListView [items]="personList" class="list-group">
-        <template let-item="item">
+        <ng-template let-item="item">
             <StackLayout>
                 <Label [text]="item.firstname + ' ' + item.lastname" class="list-group-item"></Label>
             </StackLayout>
-        </template>
+        </ng-template>
     </ListView>
 </GridLayout>
