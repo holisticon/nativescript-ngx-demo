@@ -59,7 +59,7 @@
     }
   },
   "dependencies": {
-    "@angular/common": "2.4.9",
+    "@angular/common": "4.0.2",
     "@angular/compiler": "2.4.9",
     "@angular/core": "2.4.9",
     "@angular/forms": "2.4.9",
