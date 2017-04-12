@@ -93,7 +93,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "2.4.9",
-    "@angular/tsc-wrapped": "0.5.0",
+    "@angular/tsc-wrapped": "4.0.2",
     "@ngtools/webpack": "1.2.10",
     "@types/jasmine": "2.2.29",
     "@types/source-map": "0.1.26",
