@@ -66,7 +66,7 @@
     "@angular/http": "2.4.9",
     "@angular/platform-browser": "2.4.9",
     "@angular/platform-browser-dynamic": "2.4.9",
-    "@angular/router": "3.4.9",
+    "@angular/router": "4.0.2",
     "@ngx-translate/core": "6.0.1",
     "@ngx-translate/http-loader": "0.0.3",
     "nativescript-angular": "1.4.1",
