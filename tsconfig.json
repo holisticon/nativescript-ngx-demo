@@ -2,17 +2,28 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
+        "declaration": false,
+        "removeComments": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
         "noEmitHelpers": true,
         "noEmitOnError": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "importHelpers": true,
         "types": [
             "jasmine"
         ],
         "lib": [
             "es2015",
             "es2015.iterable"
-        ]
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
+            ]
+        }
     },
     "files": [
         "references.d.ts"
