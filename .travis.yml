@@ -1,7 +1,10 @@
 os: osx
-osx_image: xcode8
+osx_image: xcode8.3
 sudo: false
 language: objective-c
+
+cache:
+  - cocoapods
 
 env:
   - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3.0.0-2017-04-13-8654"
