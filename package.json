@@ -36,7 +36,7 @@
     "tslint": "tslint \"app/**/*.ts\"",
     "nsp": "nsp check",
     "ns-bundle": "ns-bundle",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prerelease": "npm run buildnumbering && npm run changelog && git add CHANGELOG.md && git add package.json && git add app/App_Resources/Android/AndroidManifest.xml && git commit -m 'Release version' || echo'' && npm run clean && cd platforms/android/libs/runtime-libs/ && rm -r nativescript-optimized.aar && mv nativescript-regular.aar nativescript-optimized.aar",
     "release": "cross-env NODE_ENV=production TNS_ANDROID_SNAPSHOT=0 KEYSTORE_PATH=$KEYSTORE_PATH KEYSTORE_PASS=$KEYSTORE_PASS tns build android --release --key-store-path $KEYSTORE_PATH --key-store-password $KEYSTORE_PASS --key-store-alias fiege --key-store-alias-password $KEYSTORE_PASS",
     "postrelease": "git checkout package.json && npm run buildnumbering",
