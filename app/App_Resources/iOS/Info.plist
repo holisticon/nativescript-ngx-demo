@@ -19,17 +19,44 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>${FABRIC_API_KEY}</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Answers</string>
+			</dict>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>We'd like to use the camera to scan EAN codes, thanks in advance!</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIRequiresFullScreen</key>
-	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -43,34 +70,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-  <dict>
-      <key>NSAllowsArbitraryLoads</key>
-      <true />
-  </dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-  <key>NSCameraUsageDescription</key>
-  <string>We'd like to use the camera to scan EAN codes, thanks in advance!</string>
-  <key>Fabric</key>
-  <dict>
-    <key>APIKey</key>
-		<string>${FABRIC_API_KEY}</string>
-    <key>Kits</key>
-    <array>
-      <dict>
-        <key>KitInfo</key>
-        <dict/>
-        <key>KitName</key>
-        <string>Answers</string>
-      </dict>
-      <dict>
-        <key>KitInfo</key>
-        <dict/>
-        <key>KitName</key>
-        <string>Crashlytics</string>
-      </dict>
-    </array>
-  </dict>
 </dict>
 </plist>

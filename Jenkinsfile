@@ -43,7 +43,7 @@ node('mac') {
 
     stage('build Apps') {
         // TODO
-      //sh "node etc/release_notes.js ${buildNumber} && npm run clean && npm run package"
+      sh "npm run buildnumbering ${buildNumber} && npm run app-changelog && npm run clean && npm run package"
       //sh "cd target && for file in *.ipa; do mv \$file \$(basename \$file .ipa)_build${buildNumber}.ipa; done && for file in *.apk; do mv \$file \$(basename \$file .apk)_build${buildNumber}.apk; done"
     }
 
