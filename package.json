@@ -86,7 +86,7 @@
     "nativescript-urlhandler": "1.0.0",
     "ng2-validation": "4.1.0",
     "reflect-metadata": "0.1.10",
-    "rxjs": "5.2.1-smooth",
+    "rxjs": "5.3.0",
     "tns-core-modules": "3.0.0-rc.2",
     "zone.js": "0.8.5"
   },
