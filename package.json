@@ -63,7 +63,7 @@
     "@angular/compiler": "2.4.9",
     "@angular/core": "2.4.9",
     "@angular/forms": "2.4.9",
-    "@angular/http": "2.4.9",
+    "@angular/http": "4.0.3",
     "@angular/platform-browser": "2.4.9",
     "@angular/platform-browser-dynamic": "2.4.9",
     "@angular/router": "3.4.9",
