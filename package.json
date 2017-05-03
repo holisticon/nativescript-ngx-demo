@@ -88,7 +88,7 @@
     "reflect-metadata": "0.1.10",
     "rxjs": "5.0.1",
     "tns-core-modules": "2.5.2",
-    "tns-core-modules-widgets": "2.5.0",
+    "tns-core-modules-widgets": "3.0.0",
     "zone.js": "0.7.2"
   },
   "devDependencies": {
