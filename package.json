@@ -133,7 +133,7 @@
     "raw-loader": "0.5.1",
     "resolve-url-loader": "2.0.2",
     "rimraf": "2.6.1",
-    "sass-loader": "6.0.3",
+    "sass-loader": "6.0.4",
     "tslint": "4.5.1",
     "tslint-eslint-rules": "4.0.0",
     "typescript": "2.1.6",
