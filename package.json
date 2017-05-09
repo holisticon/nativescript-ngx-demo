@@ -125,7 +125,7 @@
     "nativescript-css-loader": "0.26.1",
     "nativescript-dev-android-snapshot": "0.0.8",
     "nativescript-dev-sass": "1.0.0",
-    "nativescript-dev-typescript": "0.4.2",
+    "nativescript-dev-typescript": "0.4.3",
     "nativescript-dev-webpack": "0.3.7",
     "nativescript-media-generator": "0.2.4",
     "nativescript-unit-test-runner": "0.3.4",
