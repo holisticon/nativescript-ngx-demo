@@ -61,7 +61,7 @@ node('mac') {
       }
     }
   } catch (e) {
-    rocketSend emoji: ':sob:', message: 'Fehler'
+    rocketSend channel: 'holi-oss', emoji: ':rotating_light:', message: 'Fehler'
     throw e
   }
 }
