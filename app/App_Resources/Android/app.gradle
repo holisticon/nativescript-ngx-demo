@@ -1,6 +1,6 @@
 // Add your native dependencies here:
 
-def supportLibrary = "25.3.0"
+def supportLibrary = "25.3.1"
 
 dependencies {
   compile "com.android.support:support-v4:$supportLibrary"
