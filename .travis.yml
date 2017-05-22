@@ -1,11 +1,14 @@
 os: osx
-osx_image: xcode8
+osx_image: xcode8.3
 sudo: false
 language: objective-c
 
+cache:
+  - cocoapods
+
 env:
-  - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="rc"
-  - NODE_VERSION="7" NPM_VERSION="3" TNS_VERSION="rc"
+  - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3.0.0"
+  - NODE_VERSION="7" NPM_VERSION="3" TNS_VERSION="3.0.0"
 
 script:
   - export ANDROID_HOME=/usr/local/share/android-sdk
@@ -30,7 +33,7 @@ before_install:
   - echo y | sdkmanager 'extras;google;m2repository'
   - mkdir "$ANDROID_HOME/licenses" || true
   - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
-  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license" 
+  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
   - npm install -g npm@$NPM_VERSION
   - npm install -g nativescript@$TNS_VERSION
   - npm install

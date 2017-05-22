@@ -1,9 +1,11 @@
 // Add your native dependencies here:
 
+def supportLibrary = "25.3.0"
+
 dependencies {
-  compile "com.android.support:support-v4:25.3.0"
-  compile "com.android.support:appcompat-v7:21.0.0"
-  compile "com.android.support:recyclerview-v7:25.3.0"
+  compile "com.android.support:support-v4:$supportLibrary"
+  compile "com.android.support:appcompat-v7:$supportLibrary"
+  compile "com.android.support:recyclerview-v7:$supportLibrary"
   compile 'com.android.support:multidex:1.0.0'
 }
 
@@ -35,5 +37,14 @@ android {
 }
 
 project.ext {
+  //Support Libraries dependencies
+  supportDependencies = [
+          design           :         "com.android.support:design:${supportLibrary}",
+          recyclerView     :         "com.android.support:recyclerview-v7:${supportLibrary}",
+          cardView         :         "com.android.support:cardview-v7:${supportLibrary}",
+          appCompat        :         "com.android.support:appcompat-v7:${supportLibrary}",
+          supportAnnotation:         "com.android.support:support-annotations:${supportLibrary}",
+  ]
   googlePlayServicesVersion = "10.2.+"
 }
+

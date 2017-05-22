@@ -7,7 +7,8 @@ var args = process.argv.slice(2),
   fs = require('fs'),
   xml2js = require('xml2js'),
   xmlParser = new xml2js.Parser(),
-  builder = new xml2js.Builder();
+  builder = new xml2js.Builder(),
+  exec = require('child_process').exec;
 
 var manifestPath = __dirname + '/../app/App_Resources/Android/AndroidManifest.xml',
   buildNo = args[0] || process.env.BUILD_NUMBER || 1,
@@ -24,6 +25,14 @@ xmlParser.parseString(manifestXML, function (err, manifestData) {
   manifestData.manifest.$['android:versionName'] = version;
   var xml = builder.buildObject(manifestData);
   fs.writeFile(manifestPath, xml, function (err) {
-    if (err) throw err;
+    if (err) {
+      throw err;
+    }
   });
+});
+
+exec('/usr/libexec/PlistBuddy -c "Set :CFBundleVersion ' + buildNo + '" ' + __dirname + '"/../app/App_Resources/iOS/Info.plist"', function (err) {
+  if (err) {
+    throw err;
+  }
 });

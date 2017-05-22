@@ -10,7 +10,7 @@
 
 * Install node 6+
 * (sudo) `npm install -g npm@3`
-* (sudo) `npm install -g nativescript@2.5.3  --unsafe-perm`
+* (sudo) `npm install -g nativescript@3  --unsafe-perm`
 * OS X only:
   * `sudo gem install xcodeproj`
   * `sudo gem install cocoapods`
@@ -24,7 +24,7 @@ Prepare and setup dependencies:
 npm run clean
 ```
 
-### development
+### Development
 
 For Android watch mode:
 ```
@@ -40,6 +40,15 @@ For iOS watch mode
 ```
 npm run watch-ios
 ```
+
+### Release
+
+In order to sign the app add your Android Keystore and Apple Developer Provisioning Profiles:
+```
+KEYSTORE_PATH=<PATH_TO_MY_KEYSTORE>/android_keystore KEYSTORE_PASS=<MY_PASSWOR> npm run package
+```
+
+The iOS Profile settings can be set in `app/App_Resources/iOS/build.xcconfig`
 
 ### Troubleshooting
 
