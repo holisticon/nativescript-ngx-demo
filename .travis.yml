@@ -7,8 +7,8 @@ cache:
   - cocoapods
 
 env:
-  - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3.0.0-2017-04-13-8654"
-  - NODE_VERSION="7" NPM_VERSION="3" TNS_VERSION="3.0.0-2017-04-13-8654"
+  - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3.0.0"
+  - NODE_VERSION="7" NPM_VERSION="3" TNS_VERSION="3.0.0"
 
 script:
   - export ANDROID_HOME=/usr/local/share/android-sdk
