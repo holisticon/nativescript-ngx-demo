@@ -11,6 +11,8 @@ timeout(60) {
       def branchName = env.BRANCH_NAME
       def workspace = env.WORKSPACE
       def buildUrl = env.BUILD_URL
+      env.LANG = "en_US.UTF-8" // needed for cocoapods
+
 
       // PRINT ENVIRONMENT TO JOB
       echo "workspace directory is $workspace"
