@@ -83,7 +83,7 @@
     "nativescript-pulltorefresh": "1.1.10",
     "nativescript-theme-core": "1.0.3",
     "nativescript-toast": "1.4.5",
-    "nativescript-urlhandler": "1.0.0",
+    "nativescript-urlhandler": "1.1.0",
     "ng2-validation": "3.9.1",
     "reflect-metadata": "0.1.10",
     "rxjs": "5.0.1",
