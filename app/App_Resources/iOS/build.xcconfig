@@ -4,8 +4,7 @@ ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 
 // Release configuration
-//:configuration = Release
 CODE_SIGN_IDENTITY = iPhone Distribution: Holisticon AG (G8D6696Z88)
 DEVELOPMENT_TEAM = G8D6696Z88
 PROVISIONING_PROFILE = 2793c4ad-0306-46b7-ae59-7936ba5152ae
-// PROVISIONING_PROFILE_SPECIFIER = NativeScript Angular - Distribution
+PROVISIONING_PROFILE_SPECIFIER = NativeScript Angular - Distribution
