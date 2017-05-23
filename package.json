@@ -125,6 +125,7 @@
     "karma-nativescript-launcher": "0.4.0",
     "karma-typescript-preprocessor": "0.3.1",
     "lazy": "1.0.11",
+    "mkdirp": "0.5.1",
     "nativescript-css-loader": "0.26.1",
     "nativescript-dev-android-snapshot": "0.0.9",
     "nativescript-dev-sass": "1.1.1",
