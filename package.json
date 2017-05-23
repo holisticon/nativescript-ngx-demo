@@ -42,7 +42,7 @@
     "version-and-push": "git push origin master && git push origin --tags",
     "prerelease": "npm run buildnumbering && npm run changelog && git add CHANGELOG.md && git add package.json && git add app/App_Resources/Android/AndroidManifest.xml && git commit -m 'Release version' || echo '' && mkdir -p target platforms/android/build/outputs/apk/*-release.apk target/",
     "release": "npm run package",
-    "postrelease": "git checkout package.json && npm run buildnumbering && mv ",
+    "postrelease": "git checkout package.json && npm run buildnumbering",
     "release:snapshot": "npm run release",
     "release:major": "npm version major && npm run release && npm run version-and-push",
     "release:minor": "npm version minor && npm run release && npm run version-and-push",
