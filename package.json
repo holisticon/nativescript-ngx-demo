@@ -142,7 +142,7 @@
     "tslint-eslint-rules": "4.1.0",
     "typescript": "2.3.3",
     "webpack": "2.6.0",
-    "webpack-sources": "0.2.3",
+    "webpack-sources": "1.0.0",
     "xml2js": "0.4.17"
   },
   "keywords": [
