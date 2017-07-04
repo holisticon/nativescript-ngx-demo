@@ -45,6 +45,5 @@ project.ext {
           appCompat        :         "com.android.support:appcompat-v7:${supportLibrary}",
           supportAnnotation:         "com.android.support:support-annotations:${supportLibrary}",
   ]
-  googlePlayServicesVersion = "10.2.+"
 }
 

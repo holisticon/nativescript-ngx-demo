@@ -10,5 +10,6 @@ hooks/
 lib/
 node_modules/
 platforms/
+report/
 target/
 typings/

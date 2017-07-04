@@ -47,8 +47,10 @@
     "release:major": "npm version major && npm run release && npm run version-and-push",
     "release:minor": "npm version minor && npm run release && npm run version-and-push",
     "release:patch": "npm version patch && npm run release && npm run version-and-push",
-    "start-android-bundle": "npm run ns-bundle --android --start-app",
-    "start-ios-bundle": "npm run ns-bundle --ios --start-app",
+    "publish-ios-bundle": "npm run ns-bundle --ios --publish-app",
+    "generate-android-snapshot": "generate-android-snapshot --targetArchs arm,arm64,ia32 --install",
+    "start-android-bundle": "npm run ns-bundle --android --run-app",
+    "start-ios-bundle": "npm run ns-bundle --ios --run-app",
     "build-android-bundle": "npm run ns-bundle --android --build-app",
     "build-ios-bundle": "npm run ns-bundle --ios --build-app"
   },
@@ -58,19 +60,19 @@
       "version": "3.1.1"
     },
     "tns-ios": {
-      "version": "3.1.1"
+      "version": "3.1.0"
     }
   },
   "dependencies": {
-    "@angular/animations": "4.2.5",
-    "@angular/common": "4.2.5",
-    "@angular/compiler": "4.2.5",
-    "@angular/core": "4.2.5",
-    "@angular/forms": "4.2.5",
-    "@angular/http": "4.2.5",
-    "@angular/platform-browser": "4.2.5",
-    "@angular/platform-browser-dynamic": "4.2.5",
-    "@angular/router": "4.2.5",
+    "@angular/animations": "4.1.3",
+    "@angular/common": "4.1.3",
+    "@angular/compiler": "4.1.3",
+    "@angular/core": "4.1.3",
+    "@angular/forms": "4.1.3",
+    "@angular/http": "4.1.3",
+    "@angular/platform-browser": "4.1.3",
+    "@angular/platform-browser-dynamic": "4.1.3",
+    "@angular/router": "4.1.3",
     "@ngx-translate/core": "7.0.0",
     "@ngx-translate/http-loader": "0.1.0",
     "nativescript-angular": "3.1.1",
@@ -79,7 +81,7 @@
     "nativescript-cardview": "2.0.1",
     "nativescript-couchbase": "1.0.18",
     "nativescript-drawingpad": "2.1.0",
-    "nativescript-fabric": "1.0.2",
+    "nativescript-fabric": "1.0.3",
     "nativescript-loading-indicator": "2.3.2",
     "nativescript-ngx-fonticon": "2.2.1",
     "nativescript-permissions": "1.2.3",
@@ -95,9 +97,9 @@
     "zone.js": "0.8.12"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "4.2.5",
-    "@angular/tsc-wrapped": "4.2.5",
-    "@ngtools/webpack": "1.5.0",
+    "@angular/compiler-cli": "4.1.3",
+    "@angular/tsc-wrapped": "4.1.3",
+    "@ngtools/webpack": "1.4.2",
     "@types/jasmine": "2.2.29",
     "@types/source-map": "0.1.26",
     "@types/uglify-js": "2.0.27",
@@ -141,9 +143,10 @@
     "tslib": "1.7.0",
     "tslint": "5.3.0",
     "tslint-eslint-rules": "4.1.0",
-    "typescript": "2.3.3",
-    "webpack": "2.6.0",
-    "webpack-sources": "0.2.3",
+    "typescript": "2.3.4",
+    "webpack": "2.6.1",
+    "webpack-bundle-analyzer": "2.8.2",
+    "webpack-sources": "1.0.1",
     "xml2js": "0.4.17"
   },
   "keywords": [

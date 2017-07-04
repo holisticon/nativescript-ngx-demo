@@ -5,6 +5,7 @@ const nsWebpack = require("nativescript-dev-webpack");
 const nativescriptTarget = require("nativescript-dev-webpack/nativescript-target");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const { AotPlugin } = require("@ngtools/webpack");
 
@@ -110,6 +111,14 @@ function getRules() {
 
 function getPlugins(platform, env) {
   let plugins = [
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+      openAnalyzer: false,
+      generateStatsFile: true,
+      reportFilename: join(__dirname, "report", `${platform}-report.html`),
+      statsFilename: join(__dirname, "report", `${platform}-stats.json`),
+    }),
+
     new ExtractTextPlugin(mainSheet),
     new ExtractTextPlugin("platform.android.css"),
     new ExtractTextPlugin("platform.ios.css"),
@@ -148,8 +157,12 @@ function getPlugins(platform, env) {
       typeChecking: false
     }),
 
-    // Resolve .ios.css and .android.css component stylesheets
-    new nsWebpack.StyleUrlResolvePlugin({ platform }),
+    // Resolve .ios.css and .android.css component stylesheets, and .ios.html and .android component views
+    new nsWebpack.UrlResolvePlugin({
+        platform: platform,
+        resolveStylesUrls: true,
+        resolveTemplateUrl: true
+    }),
 
   ];
 
