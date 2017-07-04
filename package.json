@@ -137,7 +137,7 @@
     "nativescript-unit-test-runner": "0.3.4",
     "node-sass": "4.5.3",
     "raw-loader": "0.5.1",
-    "resolve-url-loader": "2.0.2",
+    "resolve-url-loader": "2.0.3",
     "rimraf": "2.6.1",
     "sass-loader": "6.0.5",
     "tslib": "1.7.0",
