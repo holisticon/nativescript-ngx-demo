@@ -102,7 +102,7 @@
     "@ngtools/webpack": "1.4.2",
     "@types/jasmine": "2.2.29",
     "@types/source-map": "0.1.26",
-    "@types/uglify-js": "2.0.27",
+    "@types/uglify-js": "2.6.29",
     "babel-traverse": "6.24.1",
     "babel-types": "6.24.1",
     "babylon": "6.17.1",
