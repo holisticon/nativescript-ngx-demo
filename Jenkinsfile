@@ -45,9 +45,9 @@ timeout(60) {
         }
       }
 
-      stage('build Apps') {
+      stage('Build Release') {
         sh "BUILD_NUMBER='${buildNumber}' KEYSTORE_PATH='${KEYSTORE_PATH}' KEYSTORE_PASS='${KEYSTORE_PASS}' npm run release:snapshot"
-        sh "npm run buildnumbering ${buildNumber} && npm run app-changelog && npm run clean && npm run package"
+        //sh "npm run buildnumbering ${buildNumber} && npm run app-changelog && npm run clean && npm run package"
         sh "cd target && for file in *.ipa; do mv \$file \$(basename \$file .ipa)_build${buildNumber}.ipa; done && for file in *.apk; do mv \$file \$(basename \$file .apk)_build${buildNumber}.apk; done"
         step([$class     : "ArtifactArchiver",
             artifacts  : "target/*.ipa, target/*.apk",
