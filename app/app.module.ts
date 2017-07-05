@@ -4,6 +4,8 @@ import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { TNSFontIconModule, TNSFontIconService } from 'nativescript-ngx-fonticon';
 import { FabricModule } from 'nativescript-fabric';
 
+import { ComponentsModule } from './components';
+
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
@@ -21,6 +23,7 @@ import './app.scss';
     imports: [
         NativeScriptModule,
         NativeScriptFormsModule,
+        ComponentsModule,
         AppRoutingModule,
         TNSFontIconModule.forRoot({
             'fa': './fonts/font-awesome.css',

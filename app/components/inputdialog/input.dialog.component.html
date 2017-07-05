@@ -1,0 +1,11 @@
+<ScrollView>
+  <StackLayout class="holi-dialog holi-input-dialog">
+    <Label textWrap="true" class="holi-dialog-headline" [text]="title"></Label>
+    <TextField #inputField textWrap="true" class="holi-paragraph holi-primary-text" [hint]="placeholder" [(ngModel)]="input"></TextField>
+    <GridLayout class="holi-paragraph" rows="auto" columns="*,10,*">
+      <Button row="0" col="0" [text]="cancelText" (tap)="cancel()" class="holi-button"></Button>
+      <Button row="0" col="2" [text]="confirmText" (tap)="confirm()" class="holi-button-confirm" [isEnabled]="isValid()"></Button>
+    </GridLayout>
+  </StackLayout>
+</ScrollView>
+

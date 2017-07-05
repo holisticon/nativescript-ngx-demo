@@ -1,0 +1,5 @@
+<StackLayout class="holi-paragraph" [orientation]="orientation">
+  <ntRadioButton *ngFor="let option of options; let i = index"
+                 [value]="option" (activated)="deactivateExcept(i)" [isActive]="option.key === preselected">
+  </ntRadioButton>
+</StackLayout>

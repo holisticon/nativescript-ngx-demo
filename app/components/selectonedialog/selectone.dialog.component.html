@@ -1,0 +1,11 @@
+<ScrollView>
+  <StackLayout class="holi-dialog holi-selectone-dialog">
+    <Label class="holi-dialog-headline" [text]="title"></Label>
+    <ntRadioButtonGroup [options]="options" [preselected]="preselection"></ntRadioButtonGroup>
+    <GridLayout class="holi-paragraph" rows="auto" columns="*,10,*">
+      <Button row="0" col="0" [text]="cancelText" (tap)="cancel()" class="holi-button"></Button>
+      <Button row="0" col="2" [text]="confirmText" (tap)="confirm()" class="holi-button-confirm"></Button>
+    </GridLayout>
+  </StackLayout>
+</ScrollView>
+

@@ -1,4 +1,3 @@
-
 /* imports */
 @import url("./fonts/font-awesome.css");
 @import url("./fonts/ionicons.css");
@@ -8,3 +7,299 @@
 
 /* platform styles */
 @import url("~/platform.css");
+
+/*
+ * Page layout
+ */
+
+Page {
+  font-size: 15;
+}
+
+.holi-overview {
+  width: 100%;
+  height: 100%;
+  background-color: $holi-background-page;
+}
+
+/*
+ * Container
+ */
+
+.holi-conteholi-container {
+  margin: 0;
+  padding: 10;
+}
+
+.panel {
+  padding: 10;
+}
+
+.holi-parcel-entries {
+  margin: 5 0 -5 0;
+
+  .holi-parcel {
+    padding: 8 0;
+  }
+
+  .holi-parcel-underline {
+    border-color: $holi-text-color-light;
+    border-width: 0 0 1 0;
+  }
+
+  .holi-custom-information {
+    @extend .holi-secondary-text;
+    padding: 0 0 8 0;
+  }
+
+}
+
+.holi-card {
+  margin: 0 10 5 10;
+  background-color: $holi-white;
+}
+
+.holi-page-container {
+  margin-top: 0;
+}
+
+.holi-footer-container {
+  background-color: $holi-grey;
+}
+
+.holi-delemiter {
+  height: 2;
+  width: 100%;
+  background-color: $holi-text-color-light;
+}
+
+/*
+ * Font Awesome Icon fonts
+ */
+
+.fa {
+  color: $holi-text-color;
+  font-family: FontAwesome, fontawesome-webfont;
+  font-size: 26;
+}
+
+.fa.check,
+.fa.reject,
+.fa.rejected {
+  margin: 0 8px;
+}
+
+.fa.reject,
+.fa.check,
+.fa.star-empty {
+  color: $holi-text-color-light;
+}
+
+.fa.checked {
+  color: $holi-green-accent;
+}
+
+.fa.rejected {
+  color: $holi-color-warn;
+}
+
+.fa.star-filled {
+  color: $holi-yellow;
+}
+
+/*
+ * Typography
+ */
+
+Label {
+  color: $holi-text-color-light;
+  font-size: $holi-text-regular-small;
+}
+
+Label.holi-textfield {
+  border-color: #838383;
+  border-width: 0 0 1 0;
+  margin: 11 4 0 4;
+  padding: 0 0 2 0;
+}
+
+TextField {
+  font-size: $holi-text-regular-small;
+}
+
+.holi-primary-text {
+  color: $holi-text-color;
+  font-size: $holi-text-regular-normal;
+}
+
+.holi-secondary-text {
+  color: $holi-text-color-light;
+  font-size: $holi-text-regular-small;
+}
+
+.holi-title-bar {
+  background-color: $holi-grey;
+  color: $holi-text-color;
+  font-size: $holi-text-regular-big;
+  text-align: center;
+  width: 100%;
+}
+
+.holi-label {
+  font-size: $holi-text-regular-small;
+  color: $holi-text-color;
+  text-align: left;
+}
+
+.holi-value {
+  color: $holi-text-color;
+  font-size: $holi-text-regular-small;
+  text-align: left;
+}
+
+.holi-error-input {
+  border-width: 0 0 1 0;
+  border-color: $holi-color-warn;
+  color: $holi-color-warn;
+}
+
+.holi-error-msg {
+  color: $holi-color-warn;
+}
+
+.holi-line-through {
+  text-decoration: line-through;
+}
+
+.holi-paragraph {
+  margin-top: 15;
+}
+
+/*
+ * Direction
+ */
+
+.holi-text-center {
+  text-align: center;
+}
+
+.holi-text-right {
+  text-align: right;
+}
+
+/*
+ * Navigation
+ */
+
+.holi-navigation {
+  background: $holi-grey;
+  color: $holi-text-color-light;
+  text-transform: uppercase;
+}
+
+.holi-navigation-current {
+  color: $holi-text-color;
+}
+
+.holi-tabs {
+  background-color: $holi-grey;
+  color: $holi-text-color;
+  width: 100%;
+}
+
+.holi-button {
+  font-weight: bold;
+  background-color: $holi-grey;
+  color: $holi-text-color;
+  text-transform: uppercase;
+}
+
+.holi-button-confirm {
+  font-weight: bold;
+  background-color: $holi-color-primary;
+  color: $holi-text-color-negative;
+  text-transform: uppercase;
+}
+
+.holi-button-abort {
+  font-weight: bold;
+  background-color: $holi-color-warn;
+  color: $holi-text-color-negative;
+  text-transform: uppercase;
+}
+
+/*
+ * Drawing Pad
+ */
+
+.holi-drawing-pad {
+  margin-top: 10;
+  background-color: $holi-grey;
+}
+
+.holi-hidden {
+  visibility: collapse;
+}
+
+/*
+ * Checkbox
+ */
+
+.holi-check-box {
+  height: 20;
+  width: 20;
+  margin-right: 3;
+}
+
+/*
+ * Radiobutton
+ */
+
+.holi-radio-button {
+  margin: 0 0 5 0;
+}
+
+.holi-radio-button-icon {
+  width: $holi-text-regular-normal * 1.5;
+  height: $holi-text-regular-normal * 1.5;
+  border-width: 3;
+  border-color: $holi-text-color-light;
+  border-radius: $holi-text-regular-normal;
+  padding: 3;
+  margin: 0 10 0 0;
+}
+
+.holi-radio-button-icon-inner {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 20;
+}
+
+.holi-radio-button-icon.active {
+  border-color: $holi-color-accent;
+}
+
+.holi-radio-button-icon.active .holi-radio-button-icon-inner {
+  background-color: $holi-color-accent;
+}
+
+.holi-radio-button-text {
+  @extend .holi-primary-text;
+  vertical-align: center;
+}
+
+/*
+ * Modal Dialogs
+ */
+
+.holi-dialog {
+  background-color: $holi-background-page;
+  padding: 10;
+  width: 80%;
+  .holi-dialog-headline {
+    font-size: $holi-text-regular-big;
+    color: $holi-text-color;
+    font-weight: bold;
+  }
+}

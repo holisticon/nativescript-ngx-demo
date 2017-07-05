@@ -1,0 +1,6 @@
+<StackLayout (tap)="setActive()" class="holi-radio-button" orientation="horizontal">
+  <StackLayout class="holi-radio-button-icon" [ngClass]="{active: isActive}">
+    <StackLayout class="holi-radio-button-icon-inner"></StackLayout>
+  </StackLayout>
+  <Label class="holi-radio-button-text" [text]="value.displayValue"></Label>
+</StackLayout>
