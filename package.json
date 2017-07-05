@@ -76,7 +76,7 @@
     "@ngx-translate/core": "7.0.0",
     "@ngx-translate/http-loader": "0.1.0",
     "nativescript-angular": "3.1.1",
-    "nativescript-appinfo": "0.4.0",
+    "nativescript-appinfo": "0.4.1",
     "nativescript-barcodescanner": "2.6.0",
     "nativescript-cardview": "2.0.2",
     "nativescript-couchbase": "1.0.18",
