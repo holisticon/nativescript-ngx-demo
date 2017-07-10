@@ -48,7 +48,7 @@ timeout(60) {
       stage('Build Release') {
         sh "BUILD_NUMBER='${buildNumber}' KEYSTORE_PATH='${KEYSTORE_PATH}' KEYSTORE_PASS='${KEYSTORE_PASS}' npm run release:snapshot"
         //sh "npm run buildnumbering ${buildNumber} && npm run app-changelog && npm run clean && npm run package"
-        sh "cd target && for file in *.ipa; do mv \$file \$(basename \$file .ipa)_build${buildNumber}.ipa; done && for file in *.apk; do mv \$file \$(basename \$file .apk)_build${buildNumber}.apk; done"
+        sh "cd target && for file in *.ipa; do mv \$file ngx-demo_build${buildNumber}.ipa; done && for file in *.apk; do mv \$file ngx-demo_build${buildNumber}.apk; done"
         step([$class     : "ArtifactArchiver",
             artifacts  : "target/*.ipa, target/*.apk",
             fingerprint: true
@@ -59,10 +59,10 @@ timeout(60) {
         stage('Store Upload') {
           parallel(
             'PlayStore': {
-              sh "fastlane supply --apk target/Flynn_build${buildNumber}.apk --json_key ~/.holisticon/playstore.json --package_name de.holisticon.nativescript.ngdemo --track alpha"
+              sh "fastlane supply --apk target/ngx-demo_build${buildNumber}.apk --json_key ~/.holisticon/playstore.json --package_name de.holisticon.nativescript.ngdemo --track alpha"
             },
             'iTunes Connect': {
-              sh "fastlane pilot upload --ipa target/Flynn_build${buildNumber}.ipa -u appdev@holisticon.de --changelog \"Something that is new here\""
+              sh "fastlane pilot upload --ipa target/ngx-demo_build${buildNumber}.ipa -u appdev@holisticon.de --changelog \"Something that is new here\""
             },
             failFast: false
           )
