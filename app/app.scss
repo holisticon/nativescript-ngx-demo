@@ -1,12 +1,18 @@
-/* imports */
+/*
+ * ICON FONTS
+ */
+
 @import url("./fonts/font-awesome.css");
 @import url("./fonts/ionicons.css");
 
 /* global styles for whole application */
 @import './styles/theme';
 
-/* platform styles */
-@import url("~/platform.css");
+/*
+ * PLATFORM STYLES
+ */
+
+@import url("./platform.css");
 
 /*
  * Page layout
