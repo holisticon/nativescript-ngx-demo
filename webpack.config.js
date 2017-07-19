@@ -13,203 +13,202 @@ const ENV = process.env.NODE_ENV || 'development';
 console.log('Active environment is: ', ENV);
 
 module.exports = env => {
-  const platform = getPlatform(env);
+    const platform = getPlatform(env);
 
-  // Default destination inside platforms/<platform>/...
-  const path = resolve(nsWebpack.getAppPath(platform));
+    // Default destination inside platforms/<platform>/...
+    const path = resolve(nsWebpack.getAppPath(platform));
 
-  const entry = {
-    // Discover entry module from package.json
-    bundle: `./${nsWebpack.getEntryModule()}`,
+    const entry = {
+        // Discover entry module from package.json
+        bundle: `./${nsWebpack.getEntryModule()}`,
 
-    // Vendor entry with third-party libraries
-    vendor: `./vendor`
+        // Vendor entry with third-party libraries
+        vendor: `./vendor`
 
-  };
+    };
 
-  const rules = getRules();
-  const plugins = getPlugins(platform, env);
-  const extensions = getExtensions(platform);
+    const rules = getRules();
+    const plugins = getPlugins(platform, env);
+    const extensions = getExtensions(platform);
 
-  const config = {
-    context: resolve("./app"),
-    target: nativescriptTarget,
-    entry,
-    output: {
-      pathinfo: true,
-      path,
-      libraryTarget: "commonjs2",
-      filename: "[name].js",
-    },
-    resolve: {
-      extensions,
+    const config = {
+        context: resolve("./app"),
+        target: nativescriptTarget,
+        entry,
+        output: {
+            pathinfo: true,
+            path,
+            libraryTarget: "commonjs2",
+            filename: "[name].js",
+        },
+        resolve: {
+            extensions,
 
-      // Resolve {N} system modules from tns-core-modules
-      modules: [
-        "node_modules/tns-core-modules",
-        "node_modules",
-      ],
+            // Resolve {N} system modules from tns-core-modules
+            modules: [
+                "node_modules/tns-core-modules",
+                "node_modules",
+            ],
 
-      alias: {
-        '~': resolve("./app")
-      },
-    },
-    node: {
-      // Disable node shims that conflict with NativeScript
-      "http": false,
-      "timers": false,
-      "setImmediate": false,
-      "fs": "empty",
-    },
-    module: { rules },
-    plugins,
-  };
+            alias: {
+                '~': resolve("./app")
+            },
+        },
+        node: {
+            // Disable node shims that conflict with NativeScript
+            "http": false,
+            "timers": false,
+            "setImmediate": false,
+            "fs": "empty",
+        },
+        module: { rules },
+        plugins,
+    };
 
-  if (env.snapshot) {
-    plugins.push(new nsWebpack.NativeScriptSnapshotPlugin({
-      chunk: "vendor",
-      projectRoot: __dirname,
-      webpackConfig: config,
-      targetArchs: ["arm", "arm64", "ia32"],
-      tnsJavaClassesOptions: { packages: ["tns-core-modules"] },
-      useLibs: false
-    }));
-  }
+    if (env.snapshot) {
+        plugins.push(new nsWebpack.NativeScriptSnapshotPlugin({
+            chunk: "vendor",
+            projectRoot: __dirname,
+            webpackConfig: config,
+            targetArchs: ["arm", "arm64", "ia32"],
+            tnsJavaClassesOptions: { packages: ["tns-core-modules"] },
+            useLibs: false
+        }));
+    }
 
-  return config;
+    return config;
 };
 
 
 function getPlatform(env) {
-  return env.android ? "android" :
-    env.ios ? "ios" :
-      () => { throw new Error("You need to provide a target platform!") };
+    return env.android ? "android" :
+        env.ios ? "ios" :
+        () => { throw new Error("You need to provide a target platform!") };
 }
 
 function getRules() {
-  return [
-    {
-      test: /\.html$|\.xml$/,
-      use: [
-        "raw-loader",
-      ]
-    },
-    // CSS files get bundled using the raw loader
-    {
-      test: /\.css$/,
-      exclude: new RegExp(mainSheet),
-      use: [
-        "raw-loader",
-      ]
-    },
-    // SASS support
-    {
-      test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        use: [
-          "resolve-url-loader",
-          "nativescript-css-loader",
-          "nativescript-dev-webpack/platform-css-loader",
-          "sass-loader"
-        ]
-      })
+    return [{
+            test: /\.html$|\.xml$/,
+            use: [
+                "raw-loader",
+            ]
+        },
+        // CSS files get bundled using the raw loader
+        {
+            test: /\.css$/,
+            exclude: new RegExp(mainSheet),
+            use: [
+                "raw-loader",
+            ]
+        },
+        // SASS support
+        {
+            test: /\.scss$/,
+            use: ExtractTextPlugin.extract({
+                use: [
+                    "resolve-url-loader",
+                    "nativescript-css-loader",
+                    "nativescript-dev-webpack/platform-css-loader",
+                    "sass-loader"
+                ]
+            })
 
-    },
+        },
 
 
-    // Compile TypeScript files with ahead-of-time compiler.
-    {
-      test: /\.ts$/,
-      loaders: [
-        "nativescript-dev-webpack/tns-aot-loader",
-        "@ngtools/webpack",
-      ]
-    }
+        // Compile TypeScript files with ahead-of-time compiler.
+        {
+            test: /\.ts$/,
+            loaders: [
+                "nativescript-dev-webpack/tns-aot-loader",
+                "@ngtools/webpack",
+            ]
+        }
 
-  ];
+    ];
 }
 
 function getPlugins(platform, env) {
-  let plugins = [
+    let plugins = [
 
-    new ExtractTextPlugin(mainSheet),
+        new ExtractTextPlugin(mainSheet),
 
-    new BundleAnalyzerPlugin({
-      analyzerMode: "static",
-      openAnalyzer: false,
-      generateStatsFile: ENV === 'development',
-      reportFilename: join(__dirname, "target", "report", `${platform}-report.html`),
-      statsFilename: join(__dirname, "target", "report", `${platform}-stats.json`),
-    }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: "static",
+            openAnalyzer: false,
+            generateStatsFile: ENV === 'development',
+            reportFilename: join(__dirname, "target", "report", `${platform}-report.html`),
+            statsFilename: join(__dirname, "target", "report", `${platform}-stats.json`),
+        }),
 
-    // Vendor libs go to the vendor.js chunk
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ["vendor"],
-    }),
+        // Vendor libs go to the vendor.js chunk
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ["vendor"],
+        }),
 
-    // Define useful constants like TNS_WEBPACK
-    new webpack.DefinePlugin({
-      ENV: JSON.stringify(ENV),
-      "global.TNS_WEBPACK": "true",
-    }),
+        // Define useful constants like TNS_WEBPACK
+        new webpack.DefinePlugin({
+            ENV: JSON.stringify(ENV),
+            "global.TNS_WEBPACK": "true",
+        }),
 
-    // Copy assets to out dir. Add your own globs as needed.
-    new CopyWebpackPlugin([
-      { from: "css/**" },
-      { from: "assets/**" },
-      { from: "fonts/**" },
-      { from: "**/*.jpg" },
-      { from: "**/*.png" },
-      { from: "**/*.xml" },
-    ], { ignore: ["App_Resources/**"] }),
+        // Copy assets to out dir. Add your own globs as needed.
+        new CopyWebpackPlugin([
+            { from: "css/**" },
+            { from: "assets/**" },
+            { from: "fonts/**" },
+            { from: "**/*.jpg" },
+            { from: "**/*.png" },
+            { from: "**/*.xml" },
+        ], { ignore: ["App_Resources/**"] }),
 
-    // Generate a bundle starter script and activate it in package.json
-    new nsWebpack.GenerateBundleStarterPlugin([
-      "./vendor",
-      "./bundle",
-    ]),
+        // Generate a bundle starter script and activate it in package.json
+        new nsWebpack.GenerateBundleStarterPlugin([
+            "./vendor",
+            "./bundle",
+        ]),
 
-    // Angular AOT compiler
-    new AotPlugin({
-      tsConfigPath: "tsconfig.aot.json",
-      entryModule: resolve(__dirname, "app/app.module#AppModule"),
-      typeChecking: false
-    }),
+        // Angular AOT compiler
+        new AotPlugin({
+            tsConfigPath: "tsconfig.aot.json",
+            entryModule: resolve(__dirname, "app/app.module#AppModule"),
+            typeChecking: false
+        }),
 
-    // Resolve .ios.css and .android.css component stylesheets, and .ios.html and .android component views
-    new nsWebpack.UrlResolvePlugin({
-      platform: platform,
-      resolveStylesUrls: true,
-      resolveTemplateUrl: true
-    }),
+        // Resolve .ios.css and .android.css component stylesheets, and .ios.html and .android component views
+        new nsWebpack.UrlResolvePlugin({
+            platform: platform,
+            resolveStylesUrls: true,
+            resolveTemplateUrl: true
+        }),
 
-  ];
+    ];
 
-  if (env.uglify) {
-    plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
+    if (env.uglify) {
+        plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
 
-    // Work around an Android issue by setting compress = false
-    const compress = platform !== "android";
-    plugins.push(new webpack.optimize.UglifyJsPlugin({
-      mangle: { except: nsWebpack.uglifyMangleExcludes },
-      compress,
-    }));
-  }
+        // Work around an Android issue by setting compress = false
+        const compress = platform !== "android";
+        plugins.push(new webpack.optimize.UglifyJsPlugin({
+            mangle: { except: nsWebpack.uglifyMangleExcludes },
+            compress,
+        }));
+    }
 
-  return plugins;
+    return plugins;
 }
 
 // Resolve platform-specific modules like module.android.js
 function getExtensions(platform) {
-  return Object.freeze([
-    `.${platform}.ts`,
-    `.${platform}.js`,
-    ".aot.ts",
-    ".ts",
-    ".js",
-    ".css",
-    ".scss",
-    `.${platform}.css`,
-    `.${platform}.scss`
-  ]);
+    return Object.freeze([
+        `.${platform}.ts`,
+        `.${platform}.js`,
+        ".aot.ts",
+        ".ts",
+        ".js",
+        ".css",
+        ".scss",
+        `.${platform}.css`,
+        `.${platform}.scss`
+    ]);
 }
