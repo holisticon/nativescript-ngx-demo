@@ -2,7 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/holisticon/nativescript-ngx-demo.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/holisticon/nativescript-ngx-demo.svg?branch=master)](https://travis-ci.org/holisticon/nativescript-ngx-demo)
-[![Build Status](https://dev.holisticon.de/jenkins/buildStatus/icon?job=Public/nativescript-ngx-demo/master)](https://dev.holisticon.de/jenkins/blue/organizations/jenkins/Public%2Fnativescript-ngx-demo/activity)
+[![Build Status](https://jenkins.holisticon.de/buildStatus/icon?job=Public/nativescript-ngx-demo/master)](https://jenkins.holisticon.de/blue/organizations/jenkins/Public%2Fnativescript-ngx-demo/activity)
 
 ## development environment (mac-only!)
 
