@@ -136,7 +136,7 @@
     "nativescript-dev-android-snapshot": "0.0.10",
     "nativescript-dev-sass": "1.2.0",
     "nativescript-dev-typescript": "0.5.0",
-    "nativescript-dev-webpack": "0.7.3",
+    "nativescript-dev-webpack": "0.8.0",
     "nativescript-media-generator": "0.2.4",
     "nativescript-unit-test-runner": "0.3.4",
     "node-sass": "4.5.3",
