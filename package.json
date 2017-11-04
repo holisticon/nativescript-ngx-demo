@@ -150,7 +150,7 @@
     "typescript": "2.3.4",
     "webpack": "2.6.1",
     "webpack-bundle-analyzer": "2.8.3",
-    "webpack-sources": "1.0.1",
+    "webpack-sources": "1.0.2",
     "xml2js": "0.4.17"
   },
   "keywords": [
