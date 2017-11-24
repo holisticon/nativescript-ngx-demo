@@ -6,6 +6,10 @@
 app/*.css
 app/**/*.js
 app/**/*.js.map
+app/**/*.ngfactory.ts
+app/**/*.ngsummary.json
+app/**/*.js.map
+app/**/*.js
 hooks/
 lib/
 node_modules/
