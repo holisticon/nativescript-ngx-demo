@@ -13,6 +13,8 @@ timeout(60) {
       def branchName = env.BRANCH_NAME
       def workspace = env.WORKSPACE
       def buildUrl = env.BUILD_URL
+      def keystorePath = env.KEYSTORE_PATH
+      def keystorePass = env.KEYSTORE_PASS
       env.LANG = "en_US.UTF-8" // needed for cocoapods
 
 
@@ -50,7 +52,7 @@ timeout(60) {
         }
 
         stage('Build Release') {
-          sh "BUILD_NUMBER='${buildNumber}' KEYSTORE_PATH='${KEYSTORE_PATH}' KEYSTORE_PASS='${KEYSTORE_PASS}' npm run release:snapshot"
+          sh "BUILD_NUMBER='${buildNumber}' keystorePath='${KEYSTORE_PATH}' KEYSTORE_PASS='${keystorePass}' npm run release:snapshot"
           //sh "npm run buildnumbering ${buildNumber} && npm run app-changelog && npm run clean && npm run package"
           sh "cd target && for file in *.ipa; do mv \$file ngx-demo_build${buildNumber}.ipa; done && for file in *.apk; do mv \$file ngx-demo_build${buildNumber}.apk; done"
           step([$class     : "ArtifactArchiver",
@@ -75,7 +77,7 @@ timeout(60) {
 
       }
     } catch (e) {
-      rocketSend channel: 'holi-oss', emoji: ':rotating_light:', message: 'Fehler'
+   //   rocketSend channel: 'holi-oss', emoji: ':rotating_light:', message: 'Fehler'
       throw e
     }
   }

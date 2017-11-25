@@ -2,7 +2,7 @@
     <ActionItem text="Create" (tap)="create()" ios.position="right"></ActionItem>
 </ActionBar>
 <GridLayout>
-    <ListView [items]="personList" class="list-group">
+    <ListView automationText="personList" [items]="personList" class="list-group">
         <ng-template let-item="item">
             <StackLayout>
                 <Label [text]="item.firstname + ' ' + item.lastname" class="list-group-item"></Label>
