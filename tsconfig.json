@@ -3,21 +3,19 @@
         "target": "es5",
         "module": "es2015",
         "moduleResolution": "node",
-        "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "removeComments": false,
         "noImplicitAny": false,
         "suppressImplicitAnyIndexErrors": true,
-        "types": [],
+        "types": [
+            "jasmine"
+        ],
         "lib": [
             "dom",
             "es5",
             "es6",
             "es2015.iterable"
-        ],
-        "types": [
-            "jasmine"
         ],
         "baseUrl": ".",
         "paths": {
@@ -89,6 +87,10 @@
             ],
             "globals": [
                 "node_modules/tns-core-modules/globals"
+            ],
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
             ]
         }
     },
