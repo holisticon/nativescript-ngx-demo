@@ -54,7 +54,7 @@ matrix:
       before_install: travis_wait 30 pod repo update > /dev/null 2>&1 && npm run clean
       script:
         - tns build ios
-        - cd $IOS_PACKAGE_FOLDER && zip -r $IOS_PACKAGE demo.app
+        - cd $IOS_PACKAGE_FOLDER && zip -r $IOS_PACKAGE nativescriptngxdemo.app
         - "curl -u $SAUCE_USER:$SAUCE_KEY -X POST -H 'Content-Type: application/octet-stream' $IOS_SAUCE_STORAGE --data-binary @$IOS_PACKAGE_FOLDER/$IOS_PACKAGE"
     - stage: "UI Tests"
       env:
