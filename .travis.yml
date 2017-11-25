@@ -22,7 +22,8 @@ matrix:
       language: node_js
       node_js: "6"
       jdk: oraclejdk8
-      before_install: pod repo update && npm run clean
+      cache: cocoapods
+      before_install: travis_wait 30 pod repo update > /dev/null 2>&1 && npm run clean
       script: npm run build-ios-bundle
     - language: android
       os: linux
@@ -49,7 +50,8 @@ matrix:
       language: node_js
       node_js: "6"
       jdk: oraclejdk8
-      before_install: pod repo update && npm run clean
+      cache: cocoapods
+      before_install: travis_wait 30 pod repo update > /dev/null 2>&1 && npm run clean
       script:
         - tns build ios
         - cd $IOS_PACKAGE_FOLDER && zip -r $IOS_PACKAGE demo.app
