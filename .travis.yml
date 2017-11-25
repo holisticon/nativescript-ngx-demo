@@ -22,14 +22,14 @@ matrix:
       language: node_js
       node_js: "6"
       jdk: oraclejdk8
-      before_install: npm run clean
+      before_install: pod repo update && npm run clean
       script: npm run build-ios-bundle
     - language: android
       os: linux
       env:
         - Webpack="Android"
       jdk: oraclejdk8
-      before_install: npm run clean
+      before_install: nvm install 6.10.3 && npm run clean
       script: npm run build-android-bundle
     - stage: "Build"
       env:
@@ -37,7 +37,7 @@ matrix:
       language: android
       os: linux
       jdk: oraclejdk8
-      before_install: nvm install 6.10.3 && npm i
+      before_install: nvm install 6.10.3 && npm run clean
       script:
         - tns build android
         - "curl -u $SAUCE_USER:$SAUCE_KEY -X POST -H 'Content-Type: application/octet-stream' $ANDROID_SAUCE_STORAGE --data-binary @$ANDROID_PACKAGE_FOLDER/$ANDROID_PACKAGE"
@@ -49,7 +49,7 @@ matrix:
       language: node_js
       node_js: "6"
       jdk: oraclejdk8
-      before_install: npm i
+      before_install: pod repo update && npm run clean
       script:
         - tns build ios
         - cd $IOS_PACKAGE_FOLDER && zip -r $IOS_PACKAGE demo.app
