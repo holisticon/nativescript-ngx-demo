@@ -64,7 +64,7 @@
     }
   },
   "dependencies": {
-    "@angular/animations": "4.4.6",
+    "@angular/animations": "5.0.4",
     "@angular/common": "4.4.6",
     "@angular/compiler": "4.4.6",
     "@angular/core": "4.4.6",
