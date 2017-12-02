@@ -87,7 +87,7 @@
     "nativescript-toast": "1.4.6",
     "ng2-validation": "4.2.0",
     "reflect-metadata": "0.1.10",
-    "rxjs": "5.4.1",
+    "rxjs": "5.5.3",
     "tns-core-modules": "3.2.0",
     "zone.js": "0.8.16"
   },
