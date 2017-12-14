@@ -94,7 +94,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "4.4.6",
     "@angular/tsc-wrapped": "4.4.6",
-    "@holisticon/nativescript-buildhelper": "0.2.0",
+    "@holisticon/nativescript-buildhelper": "0.2.1",
     "@ngtools/webpack": "1.6.0",
     "@types/jasmine": "2.6.0",
     "@types/source-map": "0.5.1",
