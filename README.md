@@ -1,8 +1,9 @@
-# Simple NativeScript Angular Demo App
+# Simple NativeScript Angular Demo App  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/holisticon/nativescript-ngx-demo.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/holisticon/nativescript-ngx-demo.svg?branch=master)](https://travis-ci.org/holisticon/nativescript-ngx-demo)
 [![Build Status](https://jenkins.holisticon.de/buildStatus/icon?job=Public/nativescript-ngx-demo/master)](https://jenkins.holisticon.de/blue/organizations/jenkins/Public%2Fnativescript-ngx-demo/activity)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1fd77d4968885a80238e/maintainability)](https://codeclimate.com/github/holisticon/nativescript-ngx-demo/maintainability)
 
 ## development environment (mac-only!)
 
