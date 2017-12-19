@@ -74,7 +74,7 @@
     "@angular/platform-browser-dynamic": "4.4.6",
     "@angular/router": "4.4.6",
     "@ngx-translate/core": "7.2.2",
-    "@ngx-translate/http-loader": "0.1.0",
+    "@ngx-translate/http-loader": "2.0.1",
     "nativescript-angular": "4.4.1",
     "nativescript-appinfo": "0.4.1",
     "nativescript-couchbase": "1.0.18",
