@@ -75,7 +75,7 @@
     "@angular/router": "4.4.6",
     "@ngx-translate/core": "7.2.2",
     "@ngx-translate/http-loader": "0.1.0",
-    "nativescript-angular": "4.4.1",
+    "nativescript-angular": "5.0.0",
     "nativescript-appinfo": "0.4.1",
     "nativescript-couchbase": "1.0.18",
     "nativescript-drawingpad": "2.1.0",
