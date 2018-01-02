@@ -97,7 +97,7 @@
     "@holisticon/nativescript-buildhelper": "0.2.0",
     "@ngtools/webpack": "1.6.0",
     "@types/jasmine": "2.6.0",
-    "@types/source-map": "0.5.1",
+    "@types/source-map": "0.5.7",
     "@types/uglify-js": "2.6.29",
     "babel-traverse": "6.24.1",
     "babel-types": "6.24.1",
