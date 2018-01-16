@@ -86,7 +86,7 @@
     "nativescript-theme-core": "1.0.4",
     "nativescript-toast": "1.4.6",
     "ng2-validation": "4.2.0",
-    "reflect-metadata": "0.1.10",
+    "reflect-metadata": "0.1.12",
     "rxjs": "5.4.1",
     "tns-core-modules": "3.2.0",
     "zone.js": "0.8.16"
