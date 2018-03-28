@@ -137,7 +137,7 @@
     "sass-loader": "6.0.6",
     "tslib": "1.8.0",
     "tslint": "5.7.0",
-    "tslint-eslint-rules": "4.1.1",
+    "tslint-eslint-rules": "5.0.0",
     "typescript": "2.3.4",
     "webpack": "3.2.0",
     "webpack-bundle-analyzer": "2.8.2",
