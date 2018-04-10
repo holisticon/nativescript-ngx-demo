@@ -125,7 +125,7 @@
     "mkdirp": "0.5.1",
     "nativescript-css-loader": "0.26.1",
     "nativescript-dev-sass": "1.3.2",
-    "nativescript-dev-typescript": "0.5.1",
+    "nativescript-dev-typescript": "0.7.0",
     "nativescript-dev-webpack": "0.8.0",
     "nativescript-media-generator": "1.0.0",
     "nativescript-unit-test-runner": "0.3.4",
