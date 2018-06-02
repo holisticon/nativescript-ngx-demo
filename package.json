@@ -134,7 +134,7 @@
     "raw-loader": "0.5.1",
     "resolve-url-loader": "2.1.0",
     "rimraf": "2.6.1",
-    "sass-loader": "6.0.6",
+    "sass-loader": "7.0.2",
     "tslib": "1.8.0",
     "tslint": "5.7.0",
     "tslint-eslint-rules": "5.0.0",
