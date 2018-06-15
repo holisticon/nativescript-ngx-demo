@@ -114,7 +114,7 @@
     "htmlparser2": "3.9.2",
     "jasmine-core": "2.8.0",
     "jsonlint": "1.6.3",
-    "karma": "1.7.1",
+    "karma": "2.0.3",
     "karma-coverage": "1.1.1",
     "karma-jasmine": "1.1.0",
     "karma-junit-reporter": "1.2.0",
