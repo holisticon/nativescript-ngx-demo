@@ -130,7 +130,7 @@
     "nativescript-media-generator": "1.0.0",
     "nativescript-unit-test-runner": "0.3.4",
     "nativescript-worker-loader": "0.8.1",
-    "node-sass": "4.5.3",
+    "node-sass": "4.9.1",
     "raw-loader": "0.5.1",
     "resolve-url-loader": "2.1.0",
     "rimraf": "2.6.1",
